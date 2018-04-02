@@ -1,10 +1,9 @@
 package main.java;
 
-public abstract class Element {
-
+public abstract class Player {
     private String name;
 
-    public Element(String name){
+    public Player(String name){
         this.name = name;
     }
 
@@ -12,6 +11,5 @@ public abstract class Element {
         return this.name;
     }
 
-    public abstract Outcome compareTo(Element type);
-
+    public abstract Element play();
 }

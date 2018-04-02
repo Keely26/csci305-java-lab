@@ -10,7 +10,7 @@ public class Outcome {
         this.result = result;
     }
 
-    public String print(){
+    public String toString(){
         return outcome + " -- " + result;
     }
 
