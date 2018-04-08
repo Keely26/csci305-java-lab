@@ -11,23 +11,23 @@ public class Paper extends Element {
 
         switch (e.getName()){
             case "Rock":
-                outcome = new Outcome("Paper covers Rock", "Win");
+                outcome = new Outcome("Paper covers Rock", "Paper Win");
                 break;
 
             case "Paper":
-                outcome = new Outcome("Paper equals Paper", "Tie");
+                outcome = new Outcome("Paper equals Paper", "Paper Tie");
                 break;
 
             case "Scissors":
-                outcome = new Outcome("Scissors cut Paper", "Lose");
+                outcome = new Outcome("Scissors cut Paper", "Paper Lose");
                 break;
 
             case "Lizard":
-                outcome = new Outcome("Lizard eats Paper", "Lose");
+                outcome = new Outcome("Lizard eats Paper", "Paper Lose");
                 break;
 
             case "Spock":
-                outcome = new Outcome("Paper disproves Spock", "Win");
+                outcome = new Outcome("Paper disproves Spock", "Paper Win");
                 break;
 
         }

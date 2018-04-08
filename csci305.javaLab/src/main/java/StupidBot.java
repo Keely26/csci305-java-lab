@@ -7,7 +7,7 @@ public class StupidBot extends Player{
     }
 
     @Override
-    public Element play() {
+    public Element play(Element move) {
         //return Rock every time
         return new Rock("Rock");
     }

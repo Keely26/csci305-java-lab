@@ -8,28 +8,31 @@ public class RandomBot extends Player {
     }
 
     @Override
-    public Element play() {
+    public Element play(Element move) {
+        Element playerMove = null;
+
         //randomly picks one of the five options from moves
         Random random = new Random();
         int randNum = random.nextInt((5 - 1) + 1);
 
         switch (randNum) {
             case 0:
-                return new Rock("Rock");
-
+                playerMove = new Rock("Rock");
+                break;
             case 1:
-                return new Paper("Paper");
-
+                playerMove = new Paper("Paper");
+                break;
             case 2:
-                return new Scissors("Scissors");
-
+                playerMove = new Scissors("Scissors");
+                break;
             case 3:
-                return new Lizard("Lizard");
-
+                playerMove = new Lizard("Lizard");
+                break;
             case 4:
-                return new Spock("Spock");
+                playerMove = new Spock("Spock");
+                break;
         }
 
-        return null;
+        return playerMove;
     }
 }

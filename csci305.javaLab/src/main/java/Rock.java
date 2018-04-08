@@ -11,23 +11,23 @@ public class Rock extends Element {
 
         switch (e.getName()){
             case "Rock":
-                outcome = new Outcome("Rock equals Rock", "Tie");
+                outcome = new Outcome("Rock equals Rock", "Rock Tie");
                 break;
 
             case "Paper":
-                outcome = new Outcome("Paper covers Rock", "Lose");
+                outcome = new Outcome("Paper covers Rock", "Rock Lose");
                 break;
 
             case "Scissors":
-                outcome = new Outcome("Rock crushes Scissors", "Win");
+                outcome = new Outcome("Rock crushes Scissors", "Rock Win");
                 break;
 
             case "Lizard":
-                outcome = new Outcome("Rock crushes Lizard", "Win");
+                outcome = new Outcome("Rock crushes Lizard", "Rock Win");
                 break;
 
             case "Spock":
-                outcome = new Outcome("Spock vaporizes Rock", "Win");
+                outcome = new Outcome("Spock vaporizes Rock", "Rock Lose");
                 break;
 
         }

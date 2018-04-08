@@ -11,19 +11,19 @@ public class Spock extends Element {
 
         switch (e.getName()){
             case "Rock":
-                outcome = new Outcome("Spock vaporizes Rock", "Win");
+                outcome = new Outcome("Spock vaporizes Rock", "Spock Win");
                 break;
 
             case "Paper":
-                outcome = new Outcome("Paper disproves Spock", "Lose");
+                outcome = new Outcome("Paper disproves Spock", "Spock Lose");
                 break;
 
             case "Scissors":
-                outcome = new Outcome("Spock smashes Scissors", "Win");
+                outcome = new Outcome("Spock smashes Scissors", "Spock Win");
                 break;
 
             case "Lizard":
-                outcome = new Outcome("Lizard poisons Spock", "Lose");
+                outcome = new Outcome("Lizard poisons Spock", "Spock Lose");
                 break;
 
             case "Spock":

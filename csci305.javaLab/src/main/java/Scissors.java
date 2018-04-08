@@ -12,11 +12,11 @@ public class Scissors extends Element {
 
         switch (e.getName()){
             case "Rock":
-                outcome = new Outcome("Rock crushes Scissors", "Lose");
+                outcome = new Outcome("Rock crushes Scissors", "Scissors Lose");
                 break;
 
             case "Paper":
-                outcome = new Outcome("Scissors cut Paper", "Win");
+                outcome = new Outcome("Scissors cut Paper", "Scissors Win");
                 break;
 
             case "Scissors":
@@ -24,11 +24,11 @@ public class Scissors extends Element {
                 break;
 
             case "Lizard":
-                outcome = new Outcome("Scissors decapitate Lizard", "Win");
+                outcome = new Outcome("Scissors decapitate Lizard", "Scissors Win");
                 break;
 
             case "Spock":
-                outcome = new Outcome("Spock smashes Scissors", "Lose");
+                outcome = new Outcome("Spock smashes Scissors", "Scissors Lose");
                 break;
 
         }

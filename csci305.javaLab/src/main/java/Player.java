@@ -11,5 +11,5 @@ public abstract class Player {
         return this.name;
     }
 
-    public abstract Element play();
+    public abstract Element play(Element move);
 }

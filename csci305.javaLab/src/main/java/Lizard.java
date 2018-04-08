@@ -11,23 +11,23 @@ public class Lizard extends Element {
 
         switch (e.getName()){
             case "Rock":
-                outcome = new Outcome("Rock crushes Lizard", "Lose");
+                outcome = new Outcome("Rock crushes Lizard", "Lizard Lose");
                 break;
 
             case "Paper":
-                outcome = new Outcome("Lizard eats Paper", "Win");
+                outcome = new Outcome("Lizard eats Paper", "Lizard Win");
                 break;
 
             case "Scissors":
-                outcome = new Outcome("Scissors decapitate Lizard", "Lose");
+                outcome = new Outcome("Scissors decapitate Lizard", "Lizard Lose");
                 break;
 
             case "Lizard":
-                outcome = new Outcome("Lizard equals Lizard", "Tie");
+                outcome = new Outcome("Lizard equals Lizard", "Lizard Tie");
                 break;
 
             case "Spock":
-                outcome = new Outcome("Lizard poisons Spock", "Win");
+                outcome = new Outcome("Lizard poisons Spock", "Lizard Win");
                 break;
 
         }
