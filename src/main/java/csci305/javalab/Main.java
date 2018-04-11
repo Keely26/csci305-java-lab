@@ -21,10 +21,8 @@ public class Main {
         moves.put("Spock", new Spock("Spock"));
         moves.put("Lizard", new Lizard("Lizard"));
 
-
         System.out.println("Welcome to Rock, Paper, Scissors, Lizard, Spock, " +//  welcome message that displays my name
                 "implemented by Keely Weisbeck.");
-
 
         System.out.println("  Please choose two players:\n" +//                     print list of player options
                 "     (1) Human\n" +
@@ -43,8 +41,10 @@ public class Main {
         System.out.println(p1.getName() + " vs " + p2.getName() + ". Go!");//       print who is playing who (signals start of game)
         System.out.println("\n");
 
-
         for (int i = 1; i < 6; i++) {
+
+            System.out.println(p1.getName() + " vs " + p2.getName() + ". Go!");
+
             System.out.println("Round " + i + ": ");//                                                  print round number
 
             p1CurMove = getPlayerMove(p1.getName(), p1, p2PrevMove, p1PrevMove);//                      get player 1 move
@@ -52,8 +52,6 @@ public class Main {
 
             p2CurMove = getPlayerMove(p2.getName(), p2, p1PrevMove, p2PrevMove);//                      get player 2 move
             System.out.println("    Player 2 (" + p2.getName() + ") chose: " + p2CurMove.getName());//  print player 2 selection
-
-
 
             String outcome = String.valueOf(p1CurMove.compareTo(p2CurMove));//      get outcome of round
             String[] parts = outcome.split(" ");
@@ -63,7 +61,7 @@ public class Main {
                 System.out.println("    Player 1 won the round");//                 print player 1 is winner of round
                 p1Score = p1Score + 1;//                                            add 1 to player 1 score
 
-            } else if (lastWord.equals("Lose")){//                                  if last word is 'lose'
+            } else if (lastWord.equals("Lose")) {//                                  if last word is 'lose'
                 System.out.println("    Player 2 won the round");//                 print player 2 is winner of round
                 p2Score = p2Score + 1;//                                            add 1 to player 2 score
 
@@ -80,14 +78,13 @@ public class Main {
         }
 
         System.out.println("The score is " + p1Score + " to " + p2Score);// print the overall score
-        if(p1Score > p2Score){//                                            print the overall winner
+        if (p1Score > p2Score) {//                                            print the overall winner
             System.out.println("Player 1 Wins");
         } else if (p1Score < p2Score) {
             System.out.println("Player 2 Wins");
-        } else{//                                                           or print game was a tie
+        } else {//                                                           or print game was a tie
             System.out.println("Game was a draw");
         }
-
     }
 
     /*
@@ -125,7 +122,6 @@ public class Main {
         return player;
     }
 
-
     /*
         returns player move based on user name, type, and previous move
      */
@@ -133,9 +129,13 @@ public class Main {
         Element playerMove = null;
         switch (name) {
             case "human":
+                System.out.println("Human move");
+                playerMove = new Lizard("Lizard");
+                break;
+                /*
                 playerMove = player.play(null);//             get human move
                 break;
-
+                */
             case "stupid":
                 playerMove = player.play(null);//             get stupid move
                 break;
@@ -145,9 +145,9 @@ public class Main {
                 break;
 
             case "iterative":
-                if(prevMove == null) { //                           if first move of the game
+                if (prevMove == null) { //                           if first move of the game
                     Element temp = new Spock("Spock");
-                    playerMove = player.play(temp); //              start at first input of Map (Rock)
+                    playerMove = player.play(temp); //              start at first input of Map git (Rock)
                 } else {
                     playerMove = player.play(prevMove); //          else get move based on prevMove
                 }
@@ -155,7 +155,7 @@ public class Main {
 
             case "lastPlay":
                 //
-                if(opponentPrevMove == null) {//                            if first move of game
+                if (opponentPrevMove == null) {//                            if first move of game
                     Player temp = new RandomBot("lastPlayRand");
                     playerMove = temp.play(null);//                  return random move using RandomBot
                 } else {
@@ -164,7 +164,7 @@ public class Main {
                 break;
 
             case "myBot":
-                if(opponentPrevMove == null) {//                            if first move of the game
+                if (opponentPrevMove == null) {//                            if first move of the game
                     Player temp = new RandomBot("lastPlayRand");
                     playerMove = temp.play(null);//                   return random move using RandomBot
                 } else {

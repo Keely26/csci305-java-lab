@@ -1,26 +1,68 @@
-1. Describe your Player LastPlayBot. How did you implement this strategy?
+1. Player LastPlayBot will always play the move that the opponent played on the previous move. The class LastPlayBot is a subclass of
+   Player that has one method called play. Play takes in a Element, the opponents last move, and returns an Element of the same type.
+   The main class has two variables, p1PrevMove, p2PrevMove, that represent the players previous move defined in the main method.
+   The main method passes one of these variables into a function called  getPlayerMove(). getPlayerMove() has 4 parameters, the name of
+   the player (a string), the player (a Player), the player’s current move (an Element), and the opponents previous move (an Element).
+   When the player is a LastPlayBot getPlayerMove() will check to see if the opponents previous move is null (meaning it is the first
+   round of the game) or not. If the previous move is null then getPlayerMove() returns a random move using logic from the RandomBot Player.
+   If the move is not null getPlayerMove() then returns the Element, or move, received after calling play(opponents previous move) from the LastPlayBot class.
 
-In Main.java
+2. MyBot looks at the opponents previous move, using the same logic used for LastPlayBot, and returns a move that beats it. For example,
+   if the opponents last move was Rock then MyBot will return either Paper or Spock. The class MyBot is a subclass of Player that has one
+   method called play. Play takes in a Element, the opponents last move, and returns an Element of the same type. Like LastPlayBot, when
+   the player is a MyBot the getPlayerMove method in main will check to see if the opponents previous move is null or not. If the previous
+   move is null then getPlayerMove() returns a random move using logic from the RandomBot Player. If it is not null the play method in MyBot
+   is called passing the opponents last move as the parameter. After receiving the opponents last move from the main class the play method
+   in MyBot,  generates a random number, either 1 or 2. The random number is used to pick one of the two Elements that beats the opponents
+   last move. The Element chosen is used as MyBot’s move for that round.
 
-2. Describe your Player MyBot, explaining the strategy you employed and how you accomplished it.
+3. Binding time in java:
+   In programming binding is the act of associating properties with names, and binding time is when in the life-cycle
+   of the program the binding process happens. In java binding time happens at compile-time. An example of binding in java is when a variable
+   is assigned as an int, that information is used to generate information, like the size of the integer,  that is related to that variable.
+   Sources: https://en.wikibooks.org/wiki/Introduction_to_Programming_Languages/Binding
 
-3. Using the course notes and any web resources of your choosing, explain the type system of Java, 
-giving attention to the concepts of binding time, dynamic vs. static typing, strong vs. weak typing, 
-and user-defined types (classes). Cite any sources you used other than class discussion or the textbook.
+   Dynamic vs Static typing:
+   Java is a statically typed language. This means that the type of each variable is known at compile time, or in other words that the programmer
+   needs to specify what the type of each variable is. One benefit to being statically typed is that the code is a little easier to read because
+   each variable type is pre-defined and set. Where as in a dynamically typed language, where the programmer does not need to define variable
+   types because it is inferred at run-time, it may be a little faster to write code but not defining types can make reading and debugging code
+   a little more complicated.
+   Sources: https://stackoverflow.com/questions/1517582/what-is-the-difference-between-statically-typed-and-dynamically-typed-languages
 
-4.Play a number of games, selecting your various players. Do you notice any trends? Are you, 
-as the Human Player, able to beat any of the Bots on a consistent basis?
+   Strong vs Weak typing:
+   Java is a strongly typed language. This means that every type of data is predefined as part of the language. Some examples of this in java are
+   integer, character, hexadecimal, etc. In java all variables must be defined using one of these types.
+   Sources: https://en.wikipedia.org/wiki/Type_system#Strong_and_weak_type_systems
 
-5. Read the wikipedia entry on Normal Form Games. Also, review the Wikipedia page on Rock-paper-scissors-lizard-Spock. 
-Is it possible to design a Player strategy that is more likely to succeed? Why or why not? 
-Explain in a paragraph. It is possible to answer this question even if you did not finish the Lab.
+   User-defined types:
+   Along with the predefined data types java also has User defined types (UDT). A user defined type is a data type the the programmer defines
+   such as classes. UDTs are derived from the already defined data types.
+   Sources: https://stackoverflow.com/questions/30867364/user-defined-data-types-in-java
 
-6. Name something you like about Java. Explain.
+4. After playing each bot against one another multiple times I noticed that the StupidBot and IterativeBot always tie. I also noticed that MyBot
+   destroys the StupidBot. The RandomBot generally does okay against most bots but there are not really any concrete trends to show the RandomBot
+   does better or worse. As a Human player I can always beat the StupidBot, the IterativBot, and the LastPlayBot but it is a little unfair because
+   I know which move is going to be played. I also can hold my own against MyBot but I normally lose a few rounds. Out of all the players I have
+   the most difficulty beating the RandomBot.
 
-7. Name something you dislike about Java. Explain.
+5. The only possibility for a dominant strategy in rock-paper-scissors-lizard-spock would be a truly random opponent. there is no way to gain an
+   advantage over such an opponent, but there is also no way to implement or simulate a truly random player. Weather it’s the bias of the programmer
+   implementing the algorithm, or the bias of a giving the opponent a conscience, or a range there is no way for the result to be a pure random
+   result. If one knows the weakness of an opponent a strategy can be designed to exploit that weakness and increase the chance of winning. For example
+   if I know that my opponent will always play rock then I can dramatically increase my chances of winning if I play a move that beats rock.
 
-8. Did you enjoy this lab? Which aspects did you like and/or dislike?
+6. The overall structure of java makes writing programs more consistent and organized in my opinion. I also have the most experience with programming
+   in java so I am more comfortable and enjoy using it  more than other languages.
 
-9. Approximately how many hours did you spend on this lab?
+7. I like the structure of java for the most part but sometimes it can become tedious.
 
-10. How much experience have you had in Java prior to this course?
+8. Overall yes. It was fun to implement and it was nice to be working in java again. I did not really see the point of using a
+   map to return the elements in the iterativeBot. The map is not necessary for any of the bots and an array would have been easier
+   to iterate through to get the next element.
+
+9. 4 hours
+
+10. 3 years experience.
+
+
