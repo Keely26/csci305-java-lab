@@ -1,0 +1,26 @@
+1. Describe your Player LastPlayBot. How did you implement this strategy?
+
+In Main.java
+
+2. Describe your Player MyBot, explaining the strategy you employed and how you accomplished it.
+
+3. Using the course notes and any web resources of your choosing, explain the type system of Java, 
+giving attention to the concepts of binding time, dynamic vs. static typing, strong vs. weak typing, 
+and user-defined types (classes). Cite any sources you used other than class discussion or the textbook.
+
+4.Play a number of games, selecting your various players. Do you notice any trends? Are you, 
+as the Human Player, able to beat any of the Bots on a consistent basis?
+
+5. Read the wikipedia entry on Normal Form Games. Also, review the Wikipedia page on Rock-paper-scissors-lizard-Spock. 
+Is it possible to design a Player strategy that is more likely to succeed? Why or why not? 
+Explain in a paragraph. It is possible to answer this question even if you did not finish the Lab.
+
+6. Name something you like about Java. Explain.
+
+7. Name something you dislike about Java. Explain.
+
+8. Did you enjoy this lab? Which aspects did you like and/or dislike?
+
+9. Approximately how many hours did you spend on this lab?
+
+10. How much experience have you had in Java prior to this course?

@@ -1,32 +1,35 @@
-package main.java;
+package csci305.javalab;
 
 public class Spock extends Element {
     public Spock(String element) {
         super(element);
     }
 
+    /*
+        Returns the Outcome of the Element Spock vs _______
+     */
     @Override
     public Outcome compareTo(Element e) {
         Outcome outcome = null;
 
         switch (e.getName()){
-            case "Rock":
+            case "Rock"://                                                                      Spock vs Rock
                 outcome = new Outcome("Spock vaporizes Rock", "Spock Win");
                 break;
 
-            case "Paper":
+            case "Paper"://                                                                     Spock vs Paper
                 outcome = new Outcome("Paper disproves Spock", "Spock Lose");
                 break;
 
-            case "Scissors":
+            case "Scissors"://                                                                  Spock vs Scissors
                 outcome = new Outcome("Spock smashes Scissors", "Spock Win");
                 break;
 
-            case "Lizard":
+            case "Lizard"://                                                                    Spock vs Lizard
                 outcome = new Outcome("Lizard poisons Spock", "Spock Lose");
                 break;
 
-            case "Spock":
+            case "Spock"://                                                                     Spock vs Spock
                 outcome = new Outcome("Spock equals Spock", "Tie");
                 break;
 

@@ -1,10 +1,14 @@
-package main.java;
+package csci305.javalab;
 
 public class LastPlayBot extends Player {
     public LastPlayBot(String name) {
         super(name);
     }
 
+    /*
+        Returns a new Element that is of the same Element type as the
+        Element passed as the parameter (the opponents previous move)
+     */
     @Override
     public Element play(Element move) {
         if (move.getName() == "Rock") {
@@ -22,8 +26,8 @@ public class LastPlayBot extends Player {
         } else if (move.getName() == "Spock") {
             return new Spock("Spock");
 
-        } else {
-            return new Rock("Rock");
+        } else {//                                      if there is no Element (first move of game)
+            return new Rock("Rock");//          return Element Rock
         }
     }
 }

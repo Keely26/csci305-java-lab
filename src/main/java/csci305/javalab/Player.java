@@ -1,4 +1,4 @@
-package main.java;
+package csci305.javalab;
 
 public abstract class Player {
     private String name;

@@ -1,4 +1,4 @@
-package main.java;
+package csci305.javalab;
 
 public class StupidBot extends Player{
 
@@ -6,9 +6,11 @@ public class StupidBot extends Player{
         super(name);
     }
 
+    /*
+        Returns an Element of type Rock
+     */
     @Override
     public Element play(Element move) {
-        //return Rock every time
-        return new Rock("Rock");
+        return new Rock("Rock");//  return Rock every time
     }
 }

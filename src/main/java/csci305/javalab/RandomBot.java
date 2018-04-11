@@ -1,4 +1,4 @@
-package main.java;
+package csci305.javalab;
 
 import java.util.Random;
 
@@ -7,15 +7,17 @@ public class RandomBot extends Player {
         super(name);
     }
 
+    /*
+        Returns a random Element based on a randomly generated number between 0 and 4
+     */
     @Override
     public Element play(Element move) {
         Element playerMove = null;
 
-        //randomly picks one of the five options from moves
         Random random = new Random();
-        int randNum = random.nextInt((5 - 1) + 1);
+        int randNum = random.nextInt((5 - 1) + 1);//    randomly picks one of the five options from moves
 
-        switch (randNum) {
+        switch (randNum) {//                                    Returns an Element based on randNum
             case 0:
                 playerMove = new Rock("Rock");
                 break;

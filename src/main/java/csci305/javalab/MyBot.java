@@ -1,4 +1,4 @@
-package main.java;
+package csci305.javalab;
 
 import java.util.Random;
 
@@ -7,11 +7,13 @@ public class MyBot extends Player {
         super(name);
     }
 
+    /*
+        Returns an Element that beats the Element passed as parameter (opponents previous move)
+     */
     @Override
-    //takes the opponents last move and returns an option that beats it
     public Element play(Element move) {
         Random random = new Random();
-        int randNum = random.nextInt((2) + 1);
+        int randNum = random.nextInt((2) + 1);//    generates a random number (either 1 or 2)
 
         if (move.getName() == "Rock") {
             if (randNum == 1) {
